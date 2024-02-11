@@ -9,15 +9,15 @@ id = m01;
 metricValues = (
 {
 over = 16;
+pos = 850;
+},
+{
+over = 16;
 pos = 800;
 },
 {
 over = 16;
-pos = 700;
-},
-{
-over = 16;
-pos = 500;
+pos = 550;
 },
 {
 over = -16;
