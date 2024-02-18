@@ -22,13 +22,8 @@ FONT_LICENSE = "OFL v1.1"
 AUXILIARY_FONT = "Helvetica"
 AUXILIARY_FONT_SIZE = 48
 
-BIG_TEXT = "AFont.Garden™"
-BIG_TEXT = "Font.Garden"
-BIG_TEXT_SIDE_MARGIN = MARGIN * 1
-BIG_TEXT_BOTTOM_MARGIN = MARGIN * 5
-
 GRID_VIEW = True  # Toggle this for a grid overlay
-#GRID_VIEW = False  # Toggle this for a grid overlay
+GRID_VIEW = False  # Toggle this for a grid overlay
 
 # Handel the "--output" flag
 # For example: $ python3 documentation/image1.py --output documentation/image1.png
@@ -69,14 +64,14 @@ def grid():
 def display_grid():
     fill(None)
     stroke(1, 1, 1, 1)
-    strokeWidth(4)
+    strokeWidth(12)
     STEP_X, STEP_Y = 0, 0
     INCREMENT_X, INCREMENT_Y = MARGIN / 2, MARGIN / 2
-    rect(MARGIN, MARGIN, WIDTH - (MARGIN * 2), HEIGHT - (MARGIN * 2))
-    for x in range(29):
-        polygon((MARGIN + STEP_X, MARGIN), (MARGIN + STEP_X, HEIGHT - MARGIN))
+    rect(MARGIN, MARGIN, WIDTH - (MARGIN * 2), HEIGHT - (MARGIN * 3))
+    for x in range(12):
+        polygon((MARGIN + STEP_X, MARGIN), (MARGIN + STEP_X, HEIGHT - MARGIN * 2))
         STEP_X += INCREMENT_X
-    for y in range(29):
+    for y in range(11):
         polygon((MARGIN, MARGIN + STEP_Y), (WIDTH - MARGIN, MARGIN + STEP_Y))
         STEP_Y += INCREMENT_Y
     #polygon((WIDTH / 2, 0), (WIDTH / 2, HEIGHT))
@@ -114,13 +109,29 @@ def draw_main_text():
     fontSize(564)
     fontSize(560)
     fontSize(562)
-    text("Font.Garden", (1*MARGIN, 6*MARGIN))
+    fontSize(564)
+    fontSize(578.75)
+    #fontSize(552)
+    #text("Font.Garden", (1*MARGIN, (6*MARGIN)+24))
+    text("Font.Garden", (0.92*MARGIN, (6*MARGIN)+58))
+
+# Draw rects
+def draw_rects():
+    fill(1)
+    stroke(None)
+#    rect(1*MARGIN, 1*MARGIN, 0.5*MARGIN, 0.5*MARGIN)
+#    rect(2*MARGIN, 1*MARGIN, 0.5*MARGIN, 0.5*MARGIN)
+#    rect(3*MARGIN, 1*MARGIN, 0.5*MARGIN, 0.5*MARGIN)
+#    rect(4*MARGIN, 1*MARGIN, 0.5*MARGIN, 0.5*MARGIN)
+#    rect(5*MARGIN, 1*MARGIN, 0.5*MARGIN, 0.5*MARGIN)
+#    rect(6*MARGIN, 1*MARGIN, 0.5*MARGIN, 0.5*MARGIN)
 
 # Build and save the image
 if __name__ == "__main__":
     draw_background()
     draw_main_text()
     display_grid()
+    draw_rects()
     # Save output, using the "--output" flag location
     saveImage(args.output)
     # Print done in the terminal
