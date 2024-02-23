@@ -65,6 +65,7 @@ def display_grid():
     fill(None)
     stroke(1, 1, 1, 1)
     strokeWidth(12)
+    lineJoin("round")
     STEP_X, STEP_Y = 0, 0
     INCREMENT_X, INCREMENT_Y = MARGIN / 2, MARGIN / 2
     rect(MARGIN, MARGIN, WIDTH - (MARGIN * 2), HEIGHT - (MARGIN * 3))
@@ -74,8 +75,8 @@ def display_grid():
     for y in range(11):
         polygon((MARGIN, MARGIN + STEP_Y), (WIDTH - MARGIN, MARGIN + STEP_Y))
         STEP_Y += INCREMENT_Y
-    #polygon((WIDTH / 2, 0), (WIDTH / 2, HEIGHT))
-    #polygon((0, HEIGHT / 2), (WIDTH, HEIGHT / 2))
+    # polygon((WIDTH / 2, 0), (WIDTH / 2, HEIGHT))
+    # polygon((0, HEIGHT / 2), (WIDTH, HEIGHT / 2))
 
 
 # Remap input range to VF axis range
@@ -110,15 +111,18 @@ def draw_main_text():
     fontSize(560)
     fontSize(562)
     fontSize(564)
-    fontSize(578.75)
-    #fontSize(552)
-    #text("Font.Garden", (1*MARGIN, (6*MARGIN)+24))
-    text("Font.Garden", (0.92*MARGIN, (6*MARGIN)+58))
+    fontSize(592)
+    # fontSize(552)
+    # text("Font.Garden", (1*MARGIN, (6*MARGIN)+24))
+    text("Font.Garden", (0.92 * MARGIN, (6 * MARGIN) + 46))
+
 
 # Draw rects
 def draw_rects():
     fill(1)
     stroke(None)
+
+
 #    rect(1*MARGIN, 1*MARGIN, 0.5*MARGIN, 0.5*MARGIN)
 #    rect(2*MARGIN, 1*MARGIN, 0.5*MARGIN, 0.5*MARGIN)
 #    rect(3*MARGIN, 1*MARGIN, 0.5*MARGIN, 0.5*MARGIN)
