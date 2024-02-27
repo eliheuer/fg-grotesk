@@ -10,7 +10,9 @@ AFont.Garden™
   ",
 "™",
 "CFont.Garden  ",
-C
+C,
+"/a.001",
+a
 );
 date = "2024-02-09 20:55:26 +0000";
 familyName = "FG Grotesk";
@@ -1590,7 +1592,7 @@ unicode = 90;
 {
 color = 5;
 glyphname = a;
-lastChange = "2024-02-23 05:56:20 +0000";
+lastChange = "2024-02-27 05:52:11 +0000";
 layers = (
 {
 anchors = (
@@ -1612,8 +1614,8 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(365,-16,o),
-(388,84,o),
+(381,-16,o),
+(404,84,o),
 (416,84,cs),
 (425,84,o),
 (429,78,o),
